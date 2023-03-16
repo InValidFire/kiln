@@ -1,25 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "ember_kiln",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Kiln",
+  "description": "This mod adds a Kiln furnace type used to quickly smelt glass, stone, and clay.",
   "authors": [
-    "Me!"
+    "InValidFire (Ember)"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "CC0-1.0",
+  "license": "GPLv3",
   "icon": "assets/modid/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "gay.quack.kiln.KilnMain"
+    ],
+    "client": [
+      "gay.quack.kiln.KilnMainClient"
     ]
   },
   "mixins": [

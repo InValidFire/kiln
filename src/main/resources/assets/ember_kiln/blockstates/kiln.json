@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ember_kiln:block/kiln",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ember_kiln:block/kiln"
+    },
+    "facing=south": {
+      "model": "ember_kiln:block/kiln",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ember_kiln:block/kiln",
+      "y": 270
+    }
+  }
+}
