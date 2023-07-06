@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -15,6 +14,7 @@ import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 
@@ -32,7 +32,7 @@ public class KilnMain implements ModInitializer {
     @Override
     public void onInitialize() {
         System.out.println("Hello! Let's do kiln stuff, shall we?");
-        KILN_BLOCK = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "kiln"), new KilnBlock(FabricBlockSettings.of(Material.STONE)));
+        KILN_BLOCK = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "kiln"), new KilnBlock(FabricBlockSettings.create()));
         KILN_ITEM = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "kiln"), new BlockItem(KILN_BLOCK, new Item.Settings()));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> entries.add(KILN_ITEM));
 
@@ -48,6 +48,6 @@ public class KilnMain implements ModInitializer {
 
         KILN_RECIPE_SERIALIZER = Registry.register(Registries.RECIPE_SERIALIZER, new Identifier(MOD_ID, "kiln"), new CookingRecipeSerializer<KilnRecipe>(KilnRecipe::new, 100));
 
-        KILN_SCREEN_HANDLER = new ScreenHandlerType<KilnScreenHandler>(KilnScreenHandler::new);
+        KILN_SCREEN_HANDLER = new ScreenHandlerType<KilnScreenHandler>(KilnScreenHandler::new, FeatureSet.empty());
     }
 }
