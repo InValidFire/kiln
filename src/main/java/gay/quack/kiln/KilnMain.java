@@ -33,7 +33,7 @@ public class KilnMain implements ModInitializer {
     @Override
     public void onInitialize() {
         System.out.println("Hello! Let's do kiln stuff, shall we?");
-        KILN_BLOCK = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "kiln"), new KilnBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+        KILN_BLOCK = Registry.register(Registries.BLOCK, new Identifier(MOD_ID, "kiln"), new KilnBlock(FabricBlockSettings.copyOf(Blocks.FURNACE).strength(3.5f).requiresTool()));
         KILN_ITEM = Registry.register(Registries.ITEM, new Identifier(MOD_ID, "kiln"), new BlockItem(KILN_BLOCK, new Item.Settings()));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> entries.add(KILN_ITEM));
 
