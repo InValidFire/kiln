@@ -1,9 +1,5 @@
-# Fabric Example Mod
+# Kiln mod for Minecraft
 
-## Setup
+Kiln is a mod for Minecraft 1.20+ that adds a new furnace type; a kiln!
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+The kiln can be used to quickly smelt glass, clay, and stone items!
