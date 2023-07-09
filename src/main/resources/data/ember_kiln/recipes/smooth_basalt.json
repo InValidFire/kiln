@@ -1,0 +1,11 @@
+{
+    "type": "ember_kiln:kiln",
+    "category": "blocks",
+    "cookingtime": 200,
+    "experience": 0.1,
+    "ingredient": {
+        "item": "minecraft:basalt"
+    },
+    "result": "minecraft:smooth_basalt",
+    "cooking_time": 100
+}

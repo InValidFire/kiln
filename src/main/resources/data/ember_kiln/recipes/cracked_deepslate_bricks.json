@@ -4,7 +4,7 @@
     "cookingtime": 100,
     "experience": 0.1,
     "ingredient": {
-        "tag": "minecraft:sand"
+        "item": "minecraft:deepslate_bricks"
     },
-    "result": "minecraft:glass"
+    "result": "minecraft:cracked_deepslate_bricks"
 }

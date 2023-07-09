@@ -2,9 +2,9 @@
     "type": "ember_kiln:kiln",
     "category": "blocks",
     "cookingtime": 100,
-    "experience": 0.1,
+    "experience": 0.35,
     "ingredient": {
-        "tag": "minecraft:sand"
+        "item": "minecraft:clay"
     },
-    "result": "minecraft:glass"
+    "result": "minecraft:terracotta"
 }

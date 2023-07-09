@@ -4,7 +4,7 @@
     "cookingtime": 100,
     "experience": 0.1,
     "ingredient": {
-        "tag": "minecraft:sand"
+        "item": "minecraft:magenta_terracotta"
     },
-    "result": "minecraft:glass"
+    "result": "minecraft:magenta_glazed_terracotta"
 }

@@ -1,10 +1,10 @@
 {
     "type": "ember_kiln:kiln",
-    "category": "blocks",
+    "category": "misc",
     "cookingtime": 100,
     "experience": 0.1,
     "ingredient": {
-        "tag": "minecraft:sand"
+        "item": "minecraft:netherrack"
     },
-    "result": "minecraft:glass"
+    "result": "minecraft:nether_brick"
 }
