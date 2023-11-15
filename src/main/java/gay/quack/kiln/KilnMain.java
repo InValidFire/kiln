@@ -48,7 +48,7 @@ public class KilnMain implements ModInitializer {
         });
 
         KILN_RECIPE_SERIALIZER = Registry.register(Registries.RECIPE_SERIALIZER, new Identifier(MOD_ID, "kiln"), new CookingRecipeSerializer<KilnRecipe>(KilnRecipe::new, 100));
-
         KILN_SCREEN_HANDLER = new ScreenHandlerType<KilnScreenHandler>(KilnScreenHandler::new, FeatureSet.empty());
+        Registry.register(Registries.SCREEN_HANDLER, new Identifier(MOD_ID, "kiln"), KILN_SCREEN_HANDLER);
     }
 }
