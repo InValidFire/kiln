@@ -24,7 +24,7 @@ public class KilnBlock extends AbstractFurnaceBlock {
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return KilnBlock.checkType(world, type, KilnMain.KILN_BLOCK_ENTITY);
+        return KilnBlock.validateTicker(world, type, KilnMain.KILN_BLOCK_ENTITY);
     }
 
     @Override
