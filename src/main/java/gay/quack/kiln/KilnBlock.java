@@ -1,5 +1,6 @@
 package gay.quack.kiln;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -19,6 +20,12 @@ import org.jetbrains.annotations.Nullable;
 public class KilnBlock extends AbstractFurnaceBlock {
     protected KilnBlock(Settings settings) {
         super(settings);
+    }
+    public static final MapCodec<KilnBlock> CODEC = KilnBlock.createCodec(KilnBlock::new);
+
+    @Override
+    protected MapCodec<? extends AbstractFurnaceBlock> getCodec() {
+        return CODEC;
     }
 
     @Override
