@@ -1,5 +1,6 @@
 package gay.quack.kiln;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -20,11 +21,17 @@ public class KilnBlock extends AbstractFurnaceBlock {
     protected KilnBlock(Settings settings) {
         super(settings);
     }
+    public static final MapCodec<KilnBlock> CODEC = KilnBlock.createCodec(KilnBlock::new);
+
+    @Override
+    protected MapCodec<? extends AbstractFurnaceBlock> getCodec() {
+        return CODEC;
+    }
 
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return KilnBlock.checkType(world, type, KilnMain.KILN_BLOCK_ENTITY);
+        return KilnBlock.validateTicker(world, type, KilnMain.KILN_BLOCK_ENTITY);
     }
 
     @Override
