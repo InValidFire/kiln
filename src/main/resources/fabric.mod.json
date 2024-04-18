@@ -9,8 +9,8 @@
     "InValidFire (Ember)"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://modrinth.com/mod/embers-kiln",
+    "sources": "https://github.com/InValidFire/kiln"
   },
 
   "license": "GPLv3",
