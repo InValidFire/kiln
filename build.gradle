@@ -63,6 +63,10 @@ java {
 	targetCompatibility = JavaVersion.VERSION_21
 }
 
+remapJar {
+	archiveFileName = "${project.archives_base_name}-${project.version}-mc${project.minecraft_version}.jar"
+}
+
 jar {
 	from("LICENSE") {
 		rename { "${it}_${project.base.archivesName.get()}"}
