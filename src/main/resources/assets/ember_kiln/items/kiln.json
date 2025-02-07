@@ -1,0 +1,6 @@
+{
+ "model": {
+   "type": "minecraft:model",
+   "model": "ember_kiln:block/kiln"
+ }
+}
